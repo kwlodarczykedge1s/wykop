@@ -1,0 +1,32 @@
+<hr>
+<div class="panel panel-default" style="width: 50%; margin:0 auto; margin-top: 20px;"
+     ng-repeat="wykopy in vm.collection | filter: search">
+    <div class="panel-body" class="col-sm-8">
+        <div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <div>{{wykopy.id}}</div>
+                        <div>
+                            <button ng-click="removeData(wykopy)">Click</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-3"><img src="{{wykopy.image}}" class="img-rounded" style="width: 207px; height: 139px"></div>
+                    <div class="col-sm-8">
+
+                        <div>{{wykopy.title}}</div>
+                        <div>{{wykopy.subtitle}}</div>
+                        <br/>
+                        <div>autor: {{wykopy.author}}</div>
+                        <div>{{wykopy.content}}</div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
