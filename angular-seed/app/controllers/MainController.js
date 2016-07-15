@@ -15,9 +15,9 @@
             .catch(function () {
                 vm.collection = [];
             });
-        
-        
-        $scope.removeData = function(wykopy){
+
+
+        $scope.removeData = function (wykopy) {
             restService.remove('wykopy', wykopy.id)
 
         };

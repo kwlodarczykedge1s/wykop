@@ -12,7 +12,7 @@
             .when('/', {
                 templateUrl: '/views/main.html',
                 controller: 'MainController',
-                controllerAs: 'vm'
+                controllerAs: 'vm',
             })
             .when('/articles', {
                 templateUrl: 'views/articles.html',

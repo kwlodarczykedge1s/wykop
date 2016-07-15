@@ -6,9 +6,20 @@
  */
 (function (window) {
 
-    window.myApp.controller('MicroblogController', ['$scope', function ($scope) {
+    window.myApp.controller('MicroblogController', ['$scope', 'restService', function ($scope, restService) {
 
         // var vm = this;
+
+        var vm = this;
+        restService.get('mikroblog')
+            .then(function (resp) {
+                vm.collection = resp.data;
+                resp.data.reverse();
+            })
+            .catch(function () {
+                vm.collection = [];
+            });
+
 
     }])
 
