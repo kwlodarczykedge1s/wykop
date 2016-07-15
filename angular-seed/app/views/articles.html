@@ -1,39 +1,47 @@
-<form class="form-horizontal">
-    <div class="form-group">
-        <label class="col-sm-4 control-label">Autor</label>
-        <div class="col-sm-4">
-            <p class="form-control-static"ng-model="author">{{author}}</p>
+<form class="form-horizontal" name="Form">
+
+        <div class="form-group" ng-if="showAlert">
+            <div class="alert alert-success" id="successAlert" style="width: 25%; float: right; margin-right: 50px">
+                <strong>Success!</strong> Post Został Wysłany.
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-4 control-label col-">Tutuł</label>
-        <div class="col-sm-4">
-            <input type="input" class="form-control" placeholder="Tytuł" ng-model="title">
+
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Autor</label>
+            <div class="col-sm-4">
+                <p class="form-control-static" ng-model="author">{{author}}</p>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-4 control-label col-">Subtytuł</label>
-        <div class="col-sm-4">
-            <input type="input" class="form-control" placeholder="Subtytuł" ng-model="subtitle">
+        <div class="form-group">
+            <label class="col-sm-4 control-label col-" name="Form">Tutuł</label>
+            <div class="col-sm-4">
+                <input type="input" class="form-control" placeholder="Tytuł" ng-model="title">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-4 control-label col-">Image URL</label>
-        <div class="col-sm-4">
-            <input type="input" class="form-control" placeholder="Url" ng-model="url">
+        <div class="form-group">
+            <label class="col-sm-4 control-label col-">Subtytuł</label>
+            <div class="col-sm-4">
+                <input type="input" class="form-control" placeholder="Subtytuł" ng-model="subtitle">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-4 control-label col-">Treść</label>
-        <div class="col-sm-4">
-            <textarea class="form-control" rows="3" ng-model="content"></textarea>
+        <div class="form-group">
+            <label class="col-sm-4 control-label col-">Image URL</label>
+            <div class="col-sm-4">
+                <input type="input" class="form-control" placeholder="Url" ng-model="url">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-sm-4 control-label col-"></label>
-        <div class="col-sm-4">
-            <button type="button" class="btn btn-default" ng-click="addData()">Wyślij</button>
+        <div class="form-group">
+            <label class="col-sm-4 control-label col-">Treść</label>
+            <div class="col-sm-4">
+                <textarea class="form-control" rows="3" ng-model="content"></textarea>
+            </div>
         </div>
-    </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label col-"></label>
+            <div class="col-sm-4">
+                <button type="button" id="sendButton" class="btn btn-default" ng-click="addData()">Wyślij</button>
+                <button validation-reset="Form" class="btn btn-default">Reset</button>
+            </div>
+        </div>
 </form>
 

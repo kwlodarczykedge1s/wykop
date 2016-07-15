@@ -3,23 +3,18 @@
  */
 (function (window) {
 
-    window.myApp.controller('ArticlesController', ['$scope','restService', function ($scope, restService) {
+    window.myApp.controller('ArticlesController', ['$scope','restService','$log', function ($scope, restService, $log) {
 
         $scope.author = 'Kacper';
         $scope.score = 0;
+        $scope.button = document.querySelector('#sendButton');
+        $scope.showAlert = false;
 
 
-        // restService.post('wykopy', {
-        //     "id" : "",
-        //     "title": vm.title,
-        //     "subtitle": vm.subtitle,
-        //     "score": vm.score,
-        //     "image": vm.url",
-        //     "author": vm.author
-        // })
+        // funkcja która dodaje dane do serwera
 
         $scope.addData = function () {
-            restService.post('Wykopy', {
+            restService.post('wykopy', {
                 'title': $scope.title,
                 'subtitle': $scope.subtitle,
                 'image': $scope.url,
@@ -28,7 +23,11 @@
                 'score' : $scope.score
             })
                 .then(function () {
-                    
+
+                    $scope.showAlert = true;
+                })
+                .catch(function () {
+                    $log.error('form has not been sent');
                 })
                 
         }

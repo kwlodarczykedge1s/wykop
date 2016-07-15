@@ -15,14 +15,11 @@
             .catch(function () {
                 vm.collection = [];
             });
-
-
-        //
+        
+        
         $scope.removeData = function(wykopy){
             restService.remove('wykopy', wykopy.id)
-                .then(function () {
 
-                });
         };
     }])
 })(window);
