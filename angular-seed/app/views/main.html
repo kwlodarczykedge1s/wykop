@@ -2,7 +2,6 @@
      ng-repeat="wykopy in vm.collection | filter: search">
     <div class="panel-body" class="col-sm-8">
         <div>
-
             <div class="container">
                 <div class="row">
                     <div class="col-sm-1">
@@ -11,7 +10,7 @@
                             <button ng-click="removeData(wykopy)">Click</button>
                         </div>
                     </div>
-                    <div class="col-sm-3"><img src="{{wykopy.image}}" class="img-rounded"
+                    <div class="col-sm-3"><img ng-src="{{wykopy.image}}" class="img-rounded"
                                                style="width: 207px; height: 139px"></div>
                     <div class="col-sm-8">
 
@@ -26,5 +25,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>

@@ -20,45 +20,40 @@
         $scope.addData = function () {
             $scope.optionsRadios1 = document.querySelector('#optionsRadios1');
             $scope.optionsRadios2 = document.querySelector('#optionsRadios2');
-
+            $scope.showDate = time.format('LL');
+            var endUrl = '';
             if ($scope.optionsRadios1.checked == true) {
-                restService.post('wykopy', {
-                        'title': $scope.title,
-                        'subtitle': $scope.subtitle,
-                        'image': $scope.url,
-                        'content': $scope.content,
-                        'author': $scope.author,
-                        'date': $scope.showDate,
-                        'score': $scope.score
-                    })
-                    .then(function () {
-
-                        $scope.showAlert = true;
-                    })
-                    .catch(function () {
-                        $log.error('form has not been sent');
-                    })
+                endUrl = 'wykopy';
             }
             else if ($scope.optionsRadios2.checked == true) {
-                restService.post('mikroblog', {
-                        'title': $scope.title,
-                        'subtitle': $scope.subtitle,
-                        'image': $scope.url,
-                        'content': $scope.content,
-                        'author': $scope.author,
-                        'score': $scope.score
-                    })
-                    .then(function () {
-
-                        $scope.showAlert = true;
-                    })
-                    .catch(function () {
-                        $log.error('form has not been sent');
-                    })
+                endUrl = 'mikroblog';
             }
             else {
                 console.log('ERROR');
             }
+
+            restService.post(endUrl, {
+                    'title': $scope.title,
+                    'subtitle': $scope.subtitle,
+                    'image': $scope.url,
+                    'content': $scope.content,
+                    'author': $scope.author,
+                    'date': $scope.showDate,
+                    'score': $scope.score
+                })
+                .then(function () {
+
+                    $scope.showAlert = true;
+                })
+                .catch(function () {
+                    $log.error('form has not been sent');
+                })
+        }
+
+        $scope.showNumberWykop = function () {
+
+            restService.get('wykopy')
+
         }
 
 

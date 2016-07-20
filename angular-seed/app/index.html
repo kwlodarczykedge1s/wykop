@@ -10,14 +10,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My AngularJS App</title>
+    <title>Wykop</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="css/homePageStyles.css">
     <link rel="stylesheet" href="css/validation.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -25,20 +25,22 @@
 </head>
 <body>
 
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#!/main">Wykop</a>
+            <a class="navbar-brand" href="#!/main"><img src="image/logo_wykop_1000.png" alt="" style="max-width: 100px;"></a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="#!/main">Home</a></li>
-            <li><a href="#!/microblog">Microblog</a></li>
-            <li><a href="#!/articles">Nowy Post</a></li>
+            <li><a href="#!/main">Wykopalisko <span class="label label-primary">122</span></a></li>
+            <li><a href="#!/microblog">Microblog <span class="label label-primary">42</span></a></li>
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#!/articles"><strong>Nowy Post</strong></a></li>
         </ul>
     </div>
 </nav>
-
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -53,6 +55,13 @@
 <!--<script src="bower_components/angular-material/angular-material.js"></script>-->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/lodash/dist/lodash.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>-->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>-->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>-->
 <script src="bower_components/moment/moment.js"></script>
 <script src="bower_components/angular-validation/dist/angular-validation.js"></script>
 <script src="bower_components/angular-validation/dist/angular-validation-rule.js"></script>

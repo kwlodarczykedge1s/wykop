@@ -3,7 +3,7 @@
  */
 (function (window) {
 
-    window.myApp.factory('restService', ['$http','$log', function ($http, $log) {
+    window.myApp.factory('restService', ['$http', '$log', function ($http, $log) {
         var baseUri = 'http://localhost:3000/';
 
         return {
@@ -15,29 +15,24 @@
 
         function get(endpoint) {
             var uri = prepareUri(endpoint);
-            return $http.get(uri)
-                .catch(function (resp) {
-                    $log.error('Error Response: ' +resp.data);
-                })
+            return $http.get(uri);
         }
+
         function post(endpoint, data) {
             var uri = prepareUri(endpoint);
-            return $http.post(uri, data)
-                .catch(function (resp) {
-                    $log.error('Error Response: ' + resp.data)
-                });
+            return $http.post(uri, data);
         }
+
         function remove(endpoint, id) {
             var uri = prepareUri(endpoint);
 
-            $http.delete(uri+'/'+id)
-                .catch(function () {
+            return $http.delete(uri + '/' + id);
 
-            });
         }
+
         function put(enpoint, data) {
             var uri = prepareUri(endpoint);
-            $http.put(uri, data);
+            return $http.put(uri, data);
 
         }
 
