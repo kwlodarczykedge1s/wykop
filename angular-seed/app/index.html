@@ -25,23 +25,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#!/main"><img src="image/logo_wykop_1000.png" alt=""
-                                                        style="max-width: 100px;"></a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a href="#!/main">Wykopalisko <span class="label label-primary">122</span></a></li>
-            <li><a href="#!/microblog">Microblog <span class="label label-primary">42</span></a></li>
-
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#!/articles"><strong>Nowy Post</strong></a></li>
-        </ul>
-    </div>
-</nav>
+<div post-counter></div>
 
 <div class="navbar navbar-default navbar-fixed-bottom"><strong>Application Version: v<span app-version></span> | Authors: Kacper Włodarczyk</strong></div>
 
@@ -75,5 +59,7 @@
 <script src="commons/version/version.js"></script>
 <script src="commons/version/version-directive.js"></script>
 <script src="commons/version/interpolate-filter.js"></script>
+<script src="directives/PostCounter/PostCounter.js"></script>
+<script src="directives/PostCounter/PostCounterController.js"></script>
 </body>
 </html>
