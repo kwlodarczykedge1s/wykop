@@ -6,15 +6,13 @@
 
     window.myApp.controller('MainController', ['$scope', 'restService', function ($scope, restService) {
 
-
-
         var vm = this;
         restService.get('wykopy')
             .then(function (resp) {
                 vm.collection = resp.data;
                 resp.data.reverse();
 
-               vm.wykopCount = resp.data.length;
+                vm.wykopCount = resp.data.length;
                 console.log(vm.wykopCount);
 
             })

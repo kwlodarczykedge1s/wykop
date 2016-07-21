@@ -5,10 +5,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-1">
-                        <div>{{wykopy.id}}</div>
-                        <div>
-                            <button ng-click="removeData(wykopy)">Click</button>
-                        </div>
+                        <div><h1><span class="label label-danger">{{wykopy.id}}</span></h1></div>
+                        <div><span class="label label-primary">Wykop</span></div>
+
                     </div>
                     <div class="col-sm-3"><img ng-src="{{wykopy.image}}" class="img-rounded"
                                                style="width: 207px; height: 139px"></div>
@@ -19,7 +18,9 @@
                         <br/>
                         <div>autor: {{wykopy.author}}</div>
                         <div>{{wykopy.content}}</div>
-
+                        <div>
+                            <button class="btn btn-default" ng-click="removeData(wykopy)">Usuń</button>
+                        </div>
                     </div>
                 </div>
             </div>

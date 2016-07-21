@@ -4,9 +4,8 @@
 (function (window) {
     'use sctrict';
     window.myApp.directive('ScoreUpdate', function () {
-        return {
-           
-        }
+
+
     })
 
 })(window);

@@ -28,7 +28,8 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#!/main"><img src="image/logo_wykop_1000.png" alt="" style="max-width: 100px;"></a>
+            <a class="navbar-brand" href="#!/main"><img src="image/logo_wykop_1000.png" alt=""
+                                                        style="max-width: 100px;"></a>
         </div>
         <ul class="nav navbar-nav">
             <li><a href="#!/main">Wykopalisko <span class="label label-primary">122</span></a></li>
@@ -42,12 +43,15 @@
     </div>
 </nav>
 
+<div class="navbar navbar-default navbar-fixed-bottom"><strong>Application Version: v<span app-version></span> | Authors: Kacper Włodarczyk</strong></div>
+
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <div ng-view></div>
+
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -59,9 +63,6 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/lodash/dist/lodash.js"></script>
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>-->
 <script src="bower_components/moment/moment.js"></script>
 <script src="bower_components/angular-validation/dist/angular-validation.js"></script>
 <script src="bower_components/angular-validation/dist/angular-validation-rule.js"></script>
@@ -71,5 +72,8 @@
 <script src="controllers/ArticlesController.js"></script>
 <script src="controllers/MicroBlogController.js"></script>
 <script src="commons/rest/rest.js"></script>
+<script src="commons/version/version.js"></script>
+<script src="commons/version/version-directive.js"></script>
+<script src="commons/version/interpolate-filter.js"></script>
 </body>
 </html>
