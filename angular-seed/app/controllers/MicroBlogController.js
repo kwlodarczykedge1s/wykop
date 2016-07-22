@@ -19,6 +19,5 @@
             .catch(function () {
                 vm.collection = [];
             });
-        
     }])
 })(window);

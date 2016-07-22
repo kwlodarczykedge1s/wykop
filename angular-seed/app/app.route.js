@@ -24,6 +24,11 @@
                 controller: 'MicroblogController',
                 controllerAs: 'vm'
             })
+            .when('/comments/:id', {
+                templateUrl: '/views/comments.html',
+                controller: 'CommentsController',
+                controllerUs: 'vm'
+        })
             .otherwise({redirectTo: '/'});
     }]);
 })(window);

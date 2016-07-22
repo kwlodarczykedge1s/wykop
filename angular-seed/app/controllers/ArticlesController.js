@@ -4,7 +4,7 @@
 (function (window) {
 
     'use strict';
-    window.myApp.controller('ArticlesController', ['$scope', 'restService', '$log', function ($scope, restService, $log) {
+    window.myApp.controller('ArticlesController', ['$scope', 'restService', '$log','$route', function ($scope, restService, $log, $route) {
 
         var time = moment();
 
@@ -48,6 +48,8 @@
                 .catch(function () {
                     $log.error('form has not been sent');
                 })
+
+
         }
 
         $scope.showNumberWykop = function () {
@@ -55,6 +57,8 @@
             restService.get('wykopy')
 
         }
+
+        
 
 
     }
