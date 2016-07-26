@@ -5,8 +5,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-1">
-                        <div><h1><span class="label label-danger">{{wykopy.id}}</span></h1></div>
-                        <div><span class="label label-primary">Wykop</span></div>
+                        <div><h1><span class="label label-danger">{{wykopy.score}}</span></h1></div>
+                        <div><span class="label label-primary" ng-click="vm.incrementScore(wykopy.id, wykopy)">+</span></div>
+                        <div><span class="label label-primary" ng-click="vm.decrementScore(wykopy.id, wykopy)">-</span></div>
 
                     </div>
                     <div class="col-sm-3"><img ng-src="{{wykopy.image}}" class="img-rounded"
@@ -20,8 +21,8 @@
                         <div>{{wykopy.content}}</div>
                         <div>
                             <button class="btn btn-default" ng-click="removeData(wykopy)">Usuń</button>
-                            <button class="btn btn-default" ng-click="vm.ddd(wykopy.id)" >Komentarze</button>
-                            <a ng-href="{{'http://localhost:8000/#!/comments/'+wykopy.id}}">hgfhfghfghfg</a>
+                            <button class="btn btn-default" ng-click="vm.comments(wykopy.id)" >Komentarze</button>
+                            <button class="btn btn-default" >Klik</button>
                         </div>
                     </div>
                 </div>

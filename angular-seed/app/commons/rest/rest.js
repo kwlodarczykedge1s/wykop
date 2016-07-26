@@ -31,7 +31,7 @@
         }
 
         function put(enpoint, data) {
-            var uri = prepareUri(endpoint);
+            var uri = prepareUri(enpoint);
             return $http.put(uri, data);
 
         }
