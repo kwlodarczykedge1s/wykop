@@ -1,32 +1,51 @@
-<div class="panel panel-default" style="width: 50%; margin:0 auto; margin-top: 20px;"
-     ng-repeat="wykopy in vm.collection | filter: search">
-    <div class="panel-body" class="col-sm-8">
-        <div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-1">
-                        <div><h1><span class="label label-danger">{{wykopy.score}}</span></h1></div>
-                        <div><span class="label label-primary" ng-click="vm.incrementScore(wykopy.id, wykopy)">+</span></div>
-                        <div><span class="label label-primary" ng-click="vm.decrementScore(wykopy.id, wykopy)">-</span></div>
+<!--<div class="panel panel-default" style="width: 50%; margin:0 auto; margin-top: 20px;"-->
+     <!--ng-repeat="wykopy in vm.collection | filter: search">-->
+    <!--<div class="panel-body" class="col-sm-8">-->
+        <!--<div>-->
+            <!--<div class="container">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-1">-->
+                        <!--<div><h1><span class="label label-danger">{{wykopy.score}}</span></h1></div>-->
+                        <!--<div><span class="label label-primary" ng-click="vm.incrementScore(wykopy.id, wykopy)">+</span>-->
+                        <!--</div>-->
+                        <!--<div><span class="label label-primary" ng-click="vm.decrementScore(wykopy.id, wykopy)">-</span>-->
+                        <!--</div>-->
 
-                    </div>
-                    <div class="col-sm-3"><img ng-src="{{wykopy.image}}" class="img-rounded"
-                                               style="width: 207px; height: 139px"></div>
-                    <div class="col-sm-8">
+                    <!--</div>-->
+                    <!--<div class="col-sm-3"><img ng-src="{{wykopy.image}}" class="img-rounded"-->
+                                               <!--style="width: 207px; height: 139px"></div>-->
+                    <!--<div class="col-sm-8">-->
 
-                        <div>{{wykopy.title}}</div>
-                        <div>{{wykopy.subtitle}}</div>
-                        <br/>
-                        <div>autor: {{wykopy.author}}</div>
-                        <div>{{wykopy.content}}</div>
-                        <div>
-                            <button class="btn btn-default" ng-click="removeData(wykopy)">Usuń</button>
-                            <button class="btn btn-default" ng-click="vm.comments(wykopy.id)" >Komentarze</button>
-                            <button class="btn btn-default" >Klik</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <!--<div>{{wykopy.title}}</div>-->
+                        <!--<div>{{wykopy.subtitle}}</div>-->
+                        <!--<br/>-->
+                        <!--<div>autor: {{wykopy.author}}</div>-->
+                        <!--<div>{{wykopy.content}}</div>-->
+                        <!--<div>-->
+                            <!--<button class="btn btn-default" ng-click="removeData(wykopy)">Usuń</button>-->
+                            <!--<button class="btn btn-default" ng-click="vm.comments(wykopy.id)">Komentarze</button>-->
+                            <!--<button class="btn btn-default">Klik</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="container" ng-repeat="wykopy in vm.collection | filter: search">
+    <div class="row">
+        <div class="scoresView">
+            <div><h1><span class="label label-danger">{{wykopy.score}}</span></h1></div>
+            <div><span class="label label-primary"  ng-click="vm.incrementScore(wykopy.id, wykopy)">+</span></div>
+            <div><span class="label label-primary" ng-show="wykopy.score >= 1"  ng-click="vm.decrementScore(wykopy.id, wykopy)">-</span></div>
+        </div>
+        <div class="imgView">.
+            <img ng-click="vm.showWykop(wykopy.id)" ng-src="{{wykopy.image}}" style="width: 207px; height: 139px"></div>
+        <div class="contentView">
+            <div ng-click="vm.showWykop(wykopy.id)" class="title">{{wykopy.title}}</div>
+            <div class="subtitle">{{wykopy.subtitle}}</div>
+            <div class="author">@{{wykopy.author}}</div>
+            <div >{{wykopy.date}}</div>
         </div>
     </div>
 </div>

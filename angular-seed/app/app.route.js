@@ -28,7 +28,10 @@
                 templateUrl: '/views/comments.html',
                 controller: 'CommentsController',
                 controllerUs: 'vm'
-        })
+            })
+            .when('/wykopy/:id', {
+                templateUrl: '/views/showWykop'
+            })
             .otherwise({redirectTo: '/'});
     }]);
 })(window);

@@ -25,7 +25,6 @@
 
         function remove(endpoint, id) {
             var uri = prepareUri(endpoint);
-
             return $http.delete(uri + '/' + id);
 
         }
