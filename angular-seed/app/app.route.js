@@ -27,10 +27,17 @@
             .when('/comments/:id', {
                 templateUrl: '/views/comments.html',
                 controller: 'CommentsController',
-                controllerUs: 'vm'
+                controllerAs: 'vm'
             })
             .when('/wykopy/:id', {
-                templateUrl: '/views/showWykop'
+                templateUrl: '/views/showWykop.html',
+                controller: 'ShowWykopController',
+                controllerAs: 'vm'
+            })
+            .when('/userProfile', {
+                templateUrl: '/views/userProfile.html',
+                controller: 'UserProfileController',
+                controllerAs: 'vm'
             })
             .otherwise({redirectTo: '/'});
     }]);

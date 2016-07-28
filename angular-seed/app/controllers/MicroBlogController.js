@@ -6,7 +6,7 @@
  */
 (function (window) {
 
-    window.myApp.controller('MicroblogController', ['$scope', 'restService', function ($scope, restService) {
+    window.myApp.controller('MicroblogController', ['$scope', 'restService', '$route', function ($scope, restService, $route) {
 
         // var vm = this;
 
@@ -19,5 +19,11 @@
             .catch(function () {
                 vm.collection = [];
             });
+
+        $scope.removeData = function (mikroblog) {
+            restService.remove('mikroblog', mikroblog.id)
+            $route.reload();
+
+        };
     }])
 })(window);

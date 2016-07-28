@@ -17,17 +17,19 @@
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <!--<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">-->
     <link rel="stylesheet" href="css/homePageStyles.css">
     <link rel="stylesheet" href="css/validation.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
 <body>
-
 <div post-counter></div>
 
-<div class="navbar navbar-default navbar-fixed-bottom" id="footer"><div class="footerText">Application Version: v<span app-version></span> | Authors: Kacper Włodarczyk</div></div>
+<div class="navbar navbar-default navbar-fixed-bottom" id="footer">
+    <div class="footerText">Application Version: v<span app-version></span> | Authors: Kacper Włodarczyk / Irek Zięba
+    </div>
+</div>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -36,15 +38,16 @@
 
 <div ng-view></div>
 
-
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
 <!--<script src="bower_components/angular-material/angular-material.js"></script>-->
+</body>
+</html>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-material/angular-material.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
+<!--<script src="bower_components/angular-material/angular-material.js"></script>-->
+<!--<script src="bower_components/angular-animate/angular-animate.js"></script>-->
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/lodash/dist/lodash.js"></script>
 <script src="bower_components/moment/moment.js"></script>
@@ -56,12 +59,11 @@
 <script src="controllers/ArticlesController.js"></script>
 <script src="controllers/MicroBlogController.js"></script>
 <script src="controllers/CommentsController.js"></script>
+<script src="controllers/ShowWykopController.js"></script>
+<script src="controllers/UserProfileController.js"></script>
 <script src="commons/rest/rest.js"></script>
 <script src="commons/version/version.js"></script>
 <script src="commons/version/version-directive.js"></script>
 <script src="commons/version/interpolate-filter.js"></script>
 <script src="directives/PostCounter/PostCounter.js"></script>
 <script src="directives/PostCounter/PostCounterController.js"></script>
-
-</body>
-</html>

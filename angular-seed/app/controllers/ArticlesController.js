@@ -48,6 +48,8 @@
                 .catch(function () {
                     $log.error('form has not been sent');
                 })
+
+            $route.reload();
         }
 
     }
