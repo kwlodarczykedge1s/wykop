@@ -1,0 +1,23 @@
+<div class="container" ng-repeat="wykopy in vm.collection | filter: search">
+    <div class="row">
+        <span class="label label-danger" id="deleteWykop" ng-click="removeData(wykopy)">Usuń</span>
+        <span class="label label-info" id="editWykop" ng-click="removeData(wykopy)">Edytuj</span>
+        <div class="scoresView">
+            <div class="scoreViewCounter">{{wykopy.score}}</div>
+            <div class="scoreViewCounterIncrementButton" ng-click="vm.incrementScore(wykopy.id, wykopy)">+</div>
+            <div class="scoreViewCounterIncrementButton" ng-show="wykopy.score >= 1"
+                 ng-click="vm.decrementScore(wykopy.id, wykopy)">-
+            </div>
+        </div>
+        <div class="imgView">.
+            <img ng-click="vm.showWykop(wykopy.id)" ng-src="{{wykopy.image}}" style="width: 207px; height: 139px"></div>
+        <div class="contentView">
+            <div ng-click="vm.showWykop(wykopy.id)" class="title">{{wykopy.title}}</div>
+            <div class="subtitle">{{wykopy.subtitle}}</div>
+            <div>
+                <div class="author">@{{wykopy.author}}</div>
+                <div class="date">{{wykopy.date}}</div>
+            </div>
+        </div>
+    </div>
+</div>

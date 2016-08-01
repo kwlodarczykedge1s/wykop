@@ -193,8 +193,13 @@ h2, h3, h4, h5, p {
     padding-left: 25px;
     font-size: 22px;
 }
-.contentWykop{
 
+.contentWykop {
+    font-size: 19px;
+}
+
+.subtitleWykop {
+    font-size: 16px;
 }
 
 .footerText {
@@ -207,9 +212,13 @@ h2, h3, h4, h5, p {
 }
 
 #deleteWykop {
+     position: absolute;
+     right: -20px;
+ }
+#editWykop {
     position: absolute;
     right: -20px;
-
+    top: 25px;
 }
 
 #userProfileRow {

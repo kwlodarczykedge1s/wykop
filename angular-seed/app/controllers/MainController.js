@@ -36,10 +36,14 @@
         };
 
         $scope.removeData = function (wykopy) {
-            restService.remove('wykopy', wykopy.id)
+            restService.remove('wykopy', wykopy.id);
             $route.reload();
 
         };
+
+        $scope.updateData = function (wykopy) {
+            restService.put('wykopy', wykopy.id);
+        }
 
         vm.showWykop = function (id) {
             $location.url('wykopy/' + id)
