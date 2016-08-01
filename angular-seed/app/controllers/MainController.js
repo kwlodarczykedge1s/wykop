@@ -60,6 +60,5 @@
                 vm.getData();
             });
         };
-
     }])
 })(window);

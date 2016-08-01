@@ -1,0 +1,43 @@
+<div class="container" id="userProfileContainer">
+    <div class="row" id="userProfileRow">
+
+        <div class="userProfileLeftSide">
+            <div>
+                <img src=".././image/1247.png" alt="" id="userProfileAvatar">
+                <p class="userNickName">{{vm.user.nick}}</p>
+                <p class="userRank">{{vm.user.rank}}</p>
+            </div>
+        </div>
+        <div class="userProfileRightSide">
+            <h2>{{vm.user.firstName + ' ' + vm.user.lastName}}</h2>
+            <div class="onlinePoint"></div>
+            <h5 class="userProfileCity">{{vm.user.country + ', ' + vm.user.city}}</h5>
+
+            <div class="userData">
+                <div class="userDataContentLeft">Imię:</div>
+                <div class="userDataContent">{{vm.user.firstName}}</div>
+                <hr>
+                <div class="userDataContentLeft">Nazwisko: </div>
+                    <div class="userDataContent">{{vm.user.lastName}}</div>
+                    <hr>
+                    <div class="userDataContentLeft">Wiek: </div>
+                        <div class="userDataContent">{{vm.user.age}}</div>
+                        <hr>
+                        <div class="userDataContentLeft">Płeć: </div>
+                            <div class="userDataContent">{{vm.user.gender}}</div>
+                            <hr>
+                            <div class="userDataContentLeft">Email: </div>
+                                <div class="userDataContent">{{vm.user.email}}</div>
+                                <hr>
+                                <div class="userDataContentLeft">Kraj: </div>
+                                    <div class="userDataContent">{{vm.user.country}}</div>
+                                    <hr>
+                                    <div class="userDataContentLeft"> Miasto: </div>
+                                        <div class="userDataContent">{{vm.user.city}}</div>
+                                        <hr>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>

@@ -1,0 +1,233 @@
+body {
+    background-color: #ecf0f1;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    margin: 0;
+}
+
+img {
+    margin: 0 auto;
+}
+
+h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    background-color: #4383af;
+}
+
+.container {
+    margin-bottom: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #FFF;
+
+}
+
+.navbar-default .navbar-nav > li > a:visited {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.container {
+    background-color: #FFF;
+    border-bottom: 1px solid #dae2e4;
+    position: relative;
+}
+
+.scoresView {
+    float: left;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.imgView {
+    float: left;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.contentView {
+    float: left;
+    width: 800px;
+}
+
+.title {
+    font-size: 20px;
+    color: #4383af;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #34495e;
+}
+
+.author {
+    color: #c9cacb;
+    position: absolute;
+    bottom: 0;
+    font-weight: bold;
+}
+
+.author:hover {
+    color: #ff5917;
+}
+
+.date {
+    position: absolute;
+    bottom: 0;
+    margin-left: 70px;
+    color: #c9cacb;
+}
+
+.scoreViewCounter {
+    width: 50px;
+    height: 30px;
+    background-color: #00b3ee;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.scoreViewCounterIncrementButton {
+    width: 50px;
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFF;
+    background-color: #c9cacb;
+    font-size: 15px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+.date:hover {
+    color: #ff5917;
+}
+
+.userProfileLeftSide {
+    width: 22%;
+    float: left;
+    border-right: 1px solid #eeeeee;
+}
+
+.userProfileRightSide {
+    width: 78%;
+    float: left;
+    padding-left: 30px;
+}
+
+.userProfileCity {
+    color: #c0c0c0;
+    font-weight: bold;
+}
+
+.userNickName {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.dl-horizontal {
+    padding: 0;
+    margin: 0;
+}
+
+.userRank {
+    text-align: center;
+    font-size: 18px;
+    color: #ff5917;
+}
+
+.userData {
+    margin-top: 25px;
+}
+
+.userDataContent {
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+.userDataContentLeft {
+    float: left;
+}
+
+.onlinePoint {
+    width: 10px;
+    height: 10px;
+    float: left;
+    background-color: #91fa20;
+    border-radius: 100%;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.showWykopLeftSide {
+    width: 28%;
+    float: left;
+    border-right: 1px solid #eeeeee;
+}
+
+.showWykopRightSide {
+    width: 72%;
+    float: left;
+    padding-left: 25px;
+    font-size: 22px;
+}
+.contentWykop{
+
+}
+
+.footerText {
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+#deleteWykop {
+    position: absolute;
+    right: -20px;
+
+}
+
+#userProfileRow {
+    padding-top: 10px;
+}
+
+#footer {
+    font-size: 12px;
+    background-color: #2a6393;
+}
+
+#userProfileContainer {
+    width: 50%;
+}
+
+#userProfileAvatar {
+    border-radius: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+}
