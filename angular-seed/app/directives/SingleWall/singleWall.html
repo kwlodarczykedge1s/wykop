@@ -1,7 +1,7 @@
 <div class="container" ng-repeat="wykopy in vm.collection | filter: search">
     <div class="row">
-        <span class="label label-danger" id="deleteWykop" ng-click="removeData(wykopy)">Usuń</span>
-        <span class="label label-info" id="editWykop" ng-click="removeData(wykopy)">Edytuj</span>
+        <span class="label label-danger" id="deleteWykop" ng-click="vm.removeData(wykopy)">Usuń</span>
+        <span class="label label-info" id="editWykop" ng-click="vm.updateData(wykopy.id)">Edytuj</span>
         <div class="scoresView">
             <div class="scoreViewCounter">{{wykopy.score}}</div>
             <div class="scoreViewCounterIncrementButton" ng-click="vm.incrementScore(wykopy.id, wykopy)">+</div>

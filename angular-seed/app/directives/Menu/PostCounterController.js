@@ -4,7 +4,7 @@
 (function (window) {
     'use strict';
 
-    window.myApp.controller('PostCounterController', ['$scope', 'restService','$interval', function ($scope, restService, $interval) {
+    window.myApp.controller('PostCounterController', ['$scope', 'restService', '$interval', function ($scope, restService, $interval) {
 
         var vm = this;
         $interval(function () {
@@ -13,21 +13,21 @@
                     vm.wykopLenght = resp.data.length;
                 });
             restService.get('mikroblog')
-                .then(function (resp){
+                .then(function (resp) {
                     vm.microblogLenght = resp.data.length;
                 });
-        },1000);
-            // var vm = this;
-            // restService.get('wykopy')
-            //     .then(function (resp) {
-            //         vm.wykopLenght = resp.data.length;
-            //     });
-            // restService.get('mikroblog')
-            //     .then(function (resp){
-            //         vm.microblogLenght = resp.data.length;
-            //     });
+        }, 1000);
+        // var vm = this;
+        // restService.get('wykopy')
+        //     .then(function (resp) {
+        //         vm.wykopLenght = resp.data.length;
+        //     });
+        // restService.get('mikroblog')
+        //     .then(function (resp){
+        //         vm.microblogLenght = resp.data.length;
+        //     });
 
 
     }]);
 
-    })(window);
+})(window);

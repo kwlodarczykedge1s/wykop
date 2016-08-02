@@ -5,7 +5,7 @@
     'use strict';
 
     window.myApp.directive('postCounter', function () {
-        return{
+        return {
             templateUrl: 'directives/Menu/menu.html',
             controller: 'PostCounterController',
             controllerAs: 'vm'

@@ -17,7 +17,7 @@
             rank : 'Weteran',
             country: 'Polska',
             city : 'Lublin'
-        }
+        };
         
         console.log(vm.user);
     }]);

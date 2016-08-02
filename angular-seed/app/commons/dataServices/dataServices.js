@@ -3,7 +3,5 @@
  */
 (function (window) {
     
-    
-    
-    
+
 })(window);

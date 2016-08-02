@@ -6,14 +6,15 @@
 
         <p class="userNickName">@{{vm.collection.author}}</p>
         <p class="userNickName">{{vm.collection.date}}</p>
-        <span class="label label-danger"  ng-click="vm.removeData(wykopy)">Usuń</span>
-        <span class="label label-info" ng-click="removeData(wykopy)">Edytuj</span>
+        <span class="label label-danger" ng-click="vm.removeData(wykopy.id)">Usuń</span>
+        <span class="label label-info" ng-click="vm.updateData(wykopy.id)">Edytuj</span>
+        <div class="scoreViewCounter">{{vm.collection.score}}</div>
         <p class="userRank">{{vm.collection.rank}}</p></div>
 
-         <div class="showWykopRightSide">
+    <div class="showWykopRightSide">
         <div class="title">{{vm.collection.title}}</div>
         <div class="subtitleWykop">{{vm.collection.subtitle}}</div>
-        <hr />
+        <hr/>
         <div class="contentWykop">{{vm.collection.content}}</div>
         <div>
             <div class="author"></div>

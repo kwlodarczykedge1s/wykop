@@ -3,7 +3,7 @@
  */
 (function (window) {
 
-    window.myApp.factory('restService', ['$http', '$log', function ($http, $log) {
+    window.myApp.factory('restService', ['$http', function ($http) {
         var baseUri = 'http://localhost:3000/';
 
         return {

@@ -20,7 +20,7 @@
                 vm.collection = [];
             });
 
-        $scope.removeData = function (mikroblog) {
+        vm.removeData = function (mikroblog) {
             restService.remove('mikroblog', mikroblog.id)
             $route.reload();
 

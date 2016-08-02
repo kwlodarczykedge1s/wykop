@@ -8,7 +8,6 @@
     'use strict';
 
     window.myApp.controller('SingleWallController', ['$scope', 'restService','$interval', function ($scope, restService, $interval) {
-
         
     }]);
 
