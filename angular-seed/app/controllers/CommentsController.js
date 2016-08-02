@@ -13,7 +13,10 @@
         vm.dangerAlert = false;
         vm.successAlert = false;
 
-        vm.getData = function () {
+        vm.getData = getData;
+        vm.updateData = updateData;
+
+        function getData () {
             restService.get('wykopy/' + vm.id)
                 .then(function (resp) {
                     vm.collection = resp.data;
@@ -28,9 +31,9 @@
                     };
 
                 })
-        };
+        }
 
-        vm.updateData = function () {
+         function updateData () {
             restService.put('wykopy/' + vm.id, {
                     id: vm.id,
                     title: vm.dataJson.title,
@@ -58,7 +61,7 @@
                         vm.dangerAlert = false;
                     }, 3000);
                 });
-        };
+        }
 
         console.log(vm.id);
         vm.getData();

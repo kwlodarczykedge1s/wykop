@@ -15,7 +15,9 @@
         vm.dangerAlert = false;
         vm.successAlert = false;
 
-        vm.addData = function () {
+        vm.addData = addData;
+
+        function addData () {
             vm.optionsRadios1 = document.querySelector('#optionsRadios1');
             vm.optionsRadios2 = document.querySelector('#optionsRadios2');
             vm.showDate = time.format('LL');

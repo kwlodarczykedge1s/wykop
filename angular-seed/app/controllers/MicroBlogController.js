@@ -11,6 +11,9 @@
         // var vm = this;
 
         var vm = this;
+
+        vm.removeData = removeData;
+
         restService.get('mikroblog')
             .then(function (resp) {
                 vm.collection = resp.data;
@@ -20,10 +23,10 @@
                 vm.collection = [];
             });
 
-        vm.removeData = function (mikroblog) {
-            restService.remove('mikroblog', mikroblog.id)
+        function removeData (mikroblog) {
+            restService.remove('mikroblog', mikroblog.id);
             $route.reload();
 
-        };
+        }
     }])
 })(window);

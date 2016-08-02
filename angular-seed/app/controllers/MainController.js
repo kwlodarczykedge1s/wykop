@@ -9,7 +9,16 @@
         var vm = this;
         vm.score = 0;
 
-        vm.getData = function () {
+        vm.getData = getData;
+        vm.addPoint = addPoint;
+        vm.comments = comments;
+        vm.removeData = removeData;
+        vm.updateData = updateData;
+        vm.showWykop = showWykop;
+        vm.incrementScore = incrementScore;
+        vm.decrementScore = decrementScore;
+
+        function getData () {
             restService.get('wykopy')
                 .then(function (resp) {
                     vm.collection = resp.data;
@@ -19,46 +28,45 @@
                 .catch(function () {
                     vm.collection = [];
                 });
-        };
+        }
 
         vm.getData();
 
-        vm.addPoint = function (id) {
+        function addPoint (id) {
             console.log(id);
             restService.put('wykopy', id);
-        };
+        }
 
-        vm.comments = function (id) {
+        function comments (id) {
             $location.url('comments/' + id)
         };
 
-        vm.removeData = function (wykopy) {
+        function removeData (wykopy) {
             restService.remove('wykopy', wykopy.id);
             $route.reload();
 
-        };
+        }
 
-        vm.updateData = function (id) {
+        function updateData (id) {
             $location.url('comments/' + id)
-        };
+        }
 
-        vm.showWykop = function (id) {
+        function showWykop (id) {
             $location.url('wykopy/' + id)
-        };
+        }
 
-        vm.incrementScore = function (id, obj) {
+        function incrementScore (id, obj) {
             obj.score += 1;
-
             restService.put('wykopy/' + id, obj).then(function () {
                 vm.getData();
             })
-        };
-        vm.decrementScore = function (id, obj) {
+        }
+        
+        function decrementScore (id, obj) {
             obj.score -= 1;
-
             restService.put('wykopy/' + id, obj).then(function () {
                 vm.getData();
             });
-        };
+        }
     }])
 })(window);

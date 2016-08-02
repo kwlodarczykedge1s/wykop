@@ -8,7 +8,11 @@
         var vm = this;
         vm.id = $routeParams.id;
 
-        vm.getData = function () {
+        vm.getData = getData;
+        vm.removeData = removeData;
+        vm.updateData = updateData;
+
+        function getData () {
             restService.get('wykopy/' + vm.id)
                 .then(function (resp) {
                     vm.collection = resp.data;
@@ -18,18 +22,18 @@
                     vm.date = vm.collection.date;
                     vm.image = vm.collection.image;
                 })
-        };
+        }
 
-        vm.removeData = function (wykopy, id) {
+        function removeData (wykopy, id) {
             restService.remove('wykopy', vm.id);
             $location.url('/');
 
             $route.reload();
-        };
+        }
 
-        vm.updateData = function () {
+        function updateData () {
             $location.url('comments/' + vm.id)
-        };
+        }
         
         vm.getData();
     }])
