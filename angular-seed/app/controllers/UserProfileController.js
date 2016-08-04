@@ -8,17 +8,15 @@
         var vm = this;
 
         vm.user = {
-            firstName : 'Kacper',
-            lastName : 'Włodarczyk',
-            nick : 'Madafakerski Madafaker',
-            age : 22,
-            gender : 'Mężczyzna',
-            email : 'kacper.wlodarczyk@edge1s.com',
-            rank : 'Weteran',
+            firstName: 'Kacper',
+            lastName: 'Włodarczyk',
+            nick: 'Madafakerski Madafaker',
+            age: 22,
+            gender: 'Mężczyzna',
+            email: 'kacper.wlodarczyk@edge1s.com',
+            rank: 'Weteran',
             country: 'Polska',
-            city : 'Lublin'
+            city: 'Lublin'
         };
-        
-        console.log(vm.user);
     }]);
 })(window);

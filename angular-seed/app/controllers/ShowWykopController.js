@@ -14,7 +14,8 @@
         vm.userProfile = userProfile;
 
         getData();
-        function getData () {
+
+        function getData() {
             restService.get('wykopy/' + id)
                 .then(function (resp) {
                     vm.collection = resp.data;
@@ -26,16 +27,16 @@
                 })
         }
 
-        function removeData () {
+        function removeData() {
             restService.remove('wykopy', id);
             $location.url('/');
             $route.reload();
         }
 
-        function updateData () {
+        function updateData() {
             $location.url('comments/' + id)
         }
-        
+
 
         function userProfile() {
             $location.url('/userProfile');

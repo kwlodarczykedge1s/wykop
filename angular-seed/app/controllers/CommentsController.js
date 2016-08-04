@@ -16,7 +16,7 @@
         vm.getData = getData;
         vm.updateData = updateData;
 
-        function getData () {
+        function getData() {
             restService.get('wykopy/' + vm.id)
                 .then(function (resp) {
                     vm.collection = resp.data;
@@ -33,7 +33,7 @@
                 })
         }
 
-         function updateData () {
+        function updateData() {
             restService.put('wykopy/' + vm.id, {
                     id: vm.id,
                     title: vm.dataJson.title,
@@ -47,21 +47,22 @@
                 .then(function () {
                     vm.successAlert = true;
 
-                    var timeout = $timeout(function () {
+                    $timeout(function () {
                         vm.successAlert = false;
                     }, 2000);
 
-                    var goToLocation = $timeout(function () {
+                    $timeout(function () {
                         $location.url('/');
                     }, 3000);
                 })
                 .catch(function () {
                     vm.dangerAlert = true;
-                    var timeout = $timeout(function () {
+                    $timeout(function () {
                         vm.dangerAlert = false;
                     }, 3000);
                 });
         }
+
         vm.getData();
 
     }])

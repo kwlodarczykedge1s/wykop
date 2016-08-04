@@ -39,7 +39,7 @@
                 controller: 'UserProfileController',
                 controllerAs: 'vm'
             })
-            .when('/newMicroblog',{
+            .when('/newMicroblog', {
                 templateUrl: '/views/newMicroblog.html',
                 controller: 'NewMicroblogController',
                 controllerAs: 'vm'

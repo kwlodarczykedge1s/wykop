@@ -38,8 +38,6 @@
         function prepareUri(endpoint) {
             return baseUri + endpoint;
         }
-
-
     }]);
 
 })(window);

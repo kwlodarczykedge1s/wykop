@@ -8,9 +8,6 @@
         var vm = this;
         var time = moment();
 
-        var imageValOptsDef = "required, minlength=20";
-        vm.imageValOpts = "required, minlength=20";
-
         vm.author = 'Kacper';
         vm.score = 0;
         vm.button = document.querySelector('#sendButton');
@@ -20,7 +17,7 @@
 
         vm.addData = addData;
 
-        vm.typeMessage = ""
+        vm.typeMessage = "";
 
         function addData () {
 
@@ -41,11 +38,11 @@
 
                     vm.successAlert = true;
 
-                    var timeout = $timeout(function () {
+                    $timeout(function () {
                         vm.successAlert = false;
                     }, 2000);
 
-                    var goToLocation = $timeout(function () {
+                    $timeout(function () {
                             $location.url('/main');
                     },3000);
                 })
@@ -53,7 +50,7 @@
                     $log.error('form has not been sent');
 
                     vm.dangerAlert = true;
-                    var timeout = $timeout(function () {
+                    $timeout(function () {
                         vm.dangerAlert = false;
                     }, 3000);
                 });

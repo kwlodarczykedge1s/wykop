@@ -19,7 +19,7 @@
         vm.decrementScore = decrementScore;
         vm.userProfile = userProfile;
 
-        function getData () {
+        function getData() {
             restService.get('wykopy')
                 .then(function (resp) {
                     vm.collection = resp.data;
@@ -33,48 +33,46 @@
 
         vm.getData();
 
-        function addPoint (id) {
+        function addPoint(id) {
             console.log(id);
             restService.put('wykopy', id);
         }
 
-        function comments (id) {
+        function comments(id) {
             $location.url('comments/' + id)
         }
 
-        function removeData (wykopy) {
+        function removeData(wykopy) {
             restService.remove('wykopy', wykopy.id);
             $location.url('microblog/' + id);
             $route.reload();
 
         }
 
-        function updateData (id) {
+        function updateData(id) {
             $location.url('comments/' + id)
         }
 
-        function showWykop (id) {
+        function showWykop(id) {
             $location.url('wykopy/' + id)
         }
 
-        function incrementScore (id, obj) {
+        function incrementScore(id, obj) {
             obj.score += 1;
             restService.put('wykopy/' + id, obj).then(function () {
                 vm.getData();
             })
         }
-        
-        function decrementScore (id, obj) {
+
+        function decrementScore(id, obj) {
             obj.score -= 1;
             restService.put('wykopy/' + id, obj).then(function () {
                 vm.getData();
             });
         }
 
-        function userProfile () {
+        function userProfile() {
             $location.url('/userProfile');
         }
-
-
     }])
 })(window);
