@@ -14,7 +14,7 @@
         vm.author = 'Kacper';
         vm.score = 0;
         vm.button = document.querySelector('#sendButton');
-        vm.showDate = time.format('LL');
+        vm.showDate = time.format('L');
         vm.dangerAlert = false;
         vm.successAlert = false;
 
@@ -26,7 +26,7 @@
 
             vm.optionsRadios1 = document.querySelector('#optionsRadios1');
             vm.optionsRadios2 = document.querySelector('#optionsRadios2');
-            vm.showDate = time.format('LL');
+            vm.showDate = time.format('L');
 
             restService.post('wykopy', {
                     'title': vm.title,

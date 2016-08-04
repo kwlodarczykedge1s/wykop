@@ -13,7 +13,6 @@
         var vm = this;
         vm.incrementScore = incrementScore;
         vm.decrementScore = decrementScore;
-
         vm.removeData = removeData;
 
         restService.get('mikroblog')
@@ -29,20 +28,6 @@
             restService.remove('mikroblog', mikroblog.id);
             $route.reload();
 
-        }
-
-        function incrementScore (id, obj) {
-            obj.score += 1;
-            restService.put('mikroblog/' + id, obj).then(function () {
-                vm.getData();
-            })
-        }
-
-        function decrementScore (id, obj) {
-            obj.score -= 1;
-            restService.put('mikroblog/' + id, obj).then(function () {
-                vm.getData();
-            });
         }
 
         vm.userProfile = function () {

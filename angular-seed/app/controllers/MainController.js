@@ -40,10 +40,11 @@
 
         function comments (id) {
             $location.url('comments/' + id)
-        };
+        }
 
         function removeData (wykopy) {
             restService.remove('wykopy', wykopy.id);
+            $location.url('microblog/' + id);
             $route.reload();
 
         }
@@ -73,5 +74,7 @@
         function userProfile () {
             $location.url('/userProfile');
         }
+
+
     }])
 })(window);
