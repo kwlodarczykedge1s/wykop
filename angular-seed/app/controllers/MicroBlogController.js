@@ -6,11 +6,13 @@
  */
 (function (window) {
 
-    window.myApp.controller('MicroblogController', ['$scope', 'restService', '$route', function ($scope, restService, $route) {
+    window.myApp.controller('MicroblogController', ['$scope', 'restService', '$route','$location', function ($scope, restService, $route, $location) {
 
         // var vm = this;
 
         var vm = this;
+        vm.incrementScore = incrementScore;
+        vm.decrementScore = decrementScore;
 
         vm.removeData = removeData;
 
@@ -27,6 +29,36 @@
             restService.remove('mikroblog', mikroblog.id);
             $route.reload();
 
+        }
+
+        function incrementScore (id, obj) {
+            obj.score += 1;
+            restService.put('mikroblog/' + id, obj).then(function () {
+                vm.getData();
+            })
+        }
+
+        function decrementScore (id, obj) {
+            obj.score -= 1;
+            restService.put('mikroblog/' + id, obj).then(function () {
+                vm.getData();
+            });
+        }
+
+        vm.userProfile = function () {
+            $location.url('/userProfile');
+        }
+
+        function incrementScore (id, obj) {
+            obj.score += 1;
+            restService.put('mikroblog/' + id, obj).then(function () {
+            })
+        }
+
+        function decrementScore (id, obj) {
+            obj.score -= 1;
+            restService.put('mikroblog/' + id, obj).then(function () {
+            });
         }
     }])
 })(window);

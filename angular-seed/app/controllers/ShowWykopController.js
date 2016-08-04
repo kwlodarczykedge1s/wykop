@@ -6,14 +6,16 @@
 
     window.myApp.controller('ShowWykopController', ['$scope', 'restService', '$log', '$routeParams', '$location', '$route', function ($scope, restService, $log, $routeParams, $location, $route) {
         var vm = this;
-        vm.id = $routeParams.id;
+        var id = $routeParams.id;
 
         vm.getData = getData;
         vm.removeData = removeData;
         vm.updateData = updateData;
+        vm.userProfile = userProfile;
 
+        getData();
         function getData () {
-            restService.get('wykopy/' + vm.id)
+            restService.get('wykopy/' + id)
                 .then(function (resp) {
                     vm.collection = resp.data;
                     vm.title = vm.collection.title;
@@ -24,17 +26,19 @@
                 })
         }
 
-        function removeData (wykopy, id) {
-            restService.remove('wykopy', vm.id);
+        function removeData () {
+            restService.remove('wykopy', id);
             $location.url('/');
-
             $route.reload();
         }
 
         function updateData () {
-            $location.url('comments/' + vm.id)
+            $location.url('comments/' + id)
         }
         
-        vm.getData();
+
+        function userProfile() {
+            $location.url('/userProfile');
+        }
     }])
 })(window);

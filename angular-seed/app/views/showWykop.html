@@ -2,9 +2,9 @@
     <div class="row">
     </div>
     <div class="showWykopLeftSide">
-        <img ng-src="{{vm.collection.image}}" alt="" style="max-width: 300px;">
+        <img ng-src="{{vm.collection.image}}" alt="" class="articleImg">
 
-        <p class="userNickName">@{{vm.collection.author}}</p>
+        <p class="userNickName" ng-click="vm.userProfile()">@{{vm.collection.author}}</p>
         <p class="userNickName">{{vm.collection.date}}</p>
         <span class="label label-danger" ng-click="vm.removeData(wykopy.id)">Usuń</span>
         <span class="label label-info" ng-click="vm.updateData(wykopy.id)">Edytuj</span>
@@ -13,11 +13,11 @@
 
     <div class="showWykopRightSide">
         <div class="title">{{vm.collection.title}}</div>
-        <div class="subtitleWykop">{{vm.collection.subtitle}}</div>
+        <div class="subtitleShowWykop">{{vm.collection.subtitle}}</div>
         <hr/>
         <div class="contentWykop">{{vm.collection.content}}</div>
         <div>
-            <div class="author"></div>
+            <div class="author" ng-click="vm.userProfile()"></div>
             <div class="date"></div>
         </div>
     </div>

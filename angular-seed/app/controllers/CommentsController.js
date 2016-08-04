@@ -49,11 +49,11 @@
 
                     var timeout = $timeout(function () {
                         vm.successAlert = false;
-                    }, 3000);
+                    }, 2000);
 
                     var goToLocation = $timeout(function () {
                         $location.url('/');
-                    }, 4000);
+                    }, 3000);
                 })
                 .catch(function () {
                     vm.dangerAlert = true;
@@ -62,8 +62,6 @@
                     }, 3000);
                 });
         }
-
-        console.log(vm.id);
         vm.getData();
 
     }])

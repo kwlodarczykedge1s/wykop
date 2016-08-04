@@ -4,7 +4,7 @@
 
 (function (window) {
 
-    window.myApp.controller('MainController', ['$scope', 'restService', '$location', '$route', '$interval', function ($scope, restService, $location, $route, $interval) {
+    window.myApp.controller('MainController', ['$scope', 'restService', '$location', '$route', '$interval', function ($scope, restService, $location, $route) {
 
         var vm = this;
         vm.score = 0;
@@ -17,6 +17,7 @@
         vm.showWykop = showWykop;
         vm.incrementScore = incrementScore;
         vm.decrementScore = decrementScore;
+        vm.userProfile = userProfile;
 
         function getData () {
             restService.get('wykopy')
@@ -67,6 +68,10 @@
             restService.put('wykopy/' + id, obj).then(function () {
                 vm.getData();
             });
+        }
+
+        function userProfile () {
+            $location.url('/userProfile');
         }
     }])
 })(window);

@@ -13,6 +13,11 @@ h2, h3, h4, h5, p {
     padding: 0;
 }
 
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .content {
     width: 600px;
     margin: 0 auto;
@@ -95,6 +100,24 @@ h2, h3, h4, h5, p {
     color: #c9cacb;
 }
 
+.dateMicroblog {
+    color: #c9cacb;
+    float: left;
+    margin-left: 10px;
+    font-size: 12px;
+    margin-top: 3px;
+
+}
+
+.dateMicroblog:hover {
+    color: #ff5917;
+}
+.microBlogPhoto {
+    max-width: 600px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 .scoreViewCounter {
     width: 50px;
     height: 30px;
@@ -135,16 +158,54 @@ h2, h3, h4, h5, p {
     padding-left: 30px;
 }
 
+.microBlogTop {
+    display: block;
+}
+
 .userProfileCity {
     color: #c0c0c0;
     font-weight: bold;
 }
 
+.topHeadingMicroblog {
+
+}
+
 .userNickName {
-    text-align: center;
     margin-top: 5px;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
+    text-align: center;
+}
+.userNickName:hover {
+    color: #ff5917;
+}
+
+.userNickNameMicroblog {
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-left: 25px;
+}
+
+.userNickNameMicroblog:hover {
+    font-weight: bold;
+    float: left;
+    color: #ff5917;
+}
+
+.microBlogScore {
+    float: right;
+    margin-top: 1px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.avatar{
+    max-width: 100px;
+}
+.articleImg{
+    max-width: 300px;
 }
 
 .dl-horizontal {
@@ -194,12 +255,69 @@ h2, h3, h4, h5, p {
     font-size: 22px;
 }
 
+.microBlogContent {
+    padding-left: 15px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+
 .contentWykop {
-    font-size: 19px;
+    font-size: 17px;
 }
 
 .subtitleWykop {
     font-size: 16px;
+}
+
+.subtitleShowWykop {
+    font-size: 13px;
+}
+#formDate{
+    margin-top: 6px;
+}
+
+#microBlogIncrement {
+    float: right;
+    margin-top: 1px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #3498DB;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+#microBlogDecrement {
+    float: right;
+    margin-right: 5px;
+    margin-top: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: #3498DB;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+#wykopImage {
+    width: 207px;
+    height: 139px;
+}
+
+#microBlogContainer {
+    width: 40%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+}
+
+#deleteLabelMicroblog {
+    float: right;
+    margin-top: 3px;
+    margin-right: 15px;
 }
 
 .footerText {
@@ -211,20 +329,15 @@ h2, h3, h4, h5, p {
     color: #FFF;
 }
 
-#deleteWykop {
-     position: absolute;
-     right: -20px;
- }
-#editWykop {
-    position: absolute;
-    right: -20px;
-    top: 25px;
+.labels {
+    margin-top: 5px;
 }
 
 #userProfileRow {
     padding-top: 10px;
 }
-#resetButton{
+
+#resetButton {
     margin-left: 50px;
 }
 

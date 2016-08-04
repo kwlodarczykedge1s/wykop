@@ -14,6 +14,7 @@
     "angular-validation": "^1.4.1",
     "moment-js": "^0.4.0",
     "angular-material": "^1.0.9",
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "jquery": "^3.1.0"
   }
 }

@@ -1,23 +1,17 @@
-<div class="panel" ng-repeat="mikroblog in vm.collection | filter: search"
-     style="width: 60%; margin: 0 auto; margin-bottom: 20px;">
-    <div class="panel-heading">
-        <div class="text-center">
-            <div class="row">
-                <div class="col-sm-2">
-                    <span class="label label-danger" id="deleteWykop" ng-click="vm.removeData(mikroblog)">Usuń</span>
-                    <strong>{{mikroblog.author}}</strong>
-                    <small><em>{{mikroblog.date}}</em></small>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="pull-right">
-                    </h4>
-                </div>
+<div class="container" id="microBlogContainer" ng-repeat="mikroblog in vm.collection | filter: search">
+    <div class="row" id="microBlogRow">
+        <div class="microBlogTop">
+            <div class="topHeadingMicroblog">
+                <div class="userNickNameMicroblog" ng-click="vm.userProfile()">@{{mikroblog.author}}</div>
+                <div class="dateMicroblog"><em>{{mikroblog.date}}</em></div>
             </div>
+            <div class="label label-danger" id="deleteLabelMicroblog" ng-click="vm.removeData(mikroblog)">Usuń</div>
+            <div class="microBlogScore">{{mikroblog.score}}</div>
+            <div id="microBlogIncrement" ng-click="vm.incrementScore(mikroblog.id, mikroblog)">+</div>
+            <div id="microBlogDecrement" ng-click="vm.decrementScore(mikroblog.id, mikroblog)">-</div>
         </div>
     </div>
-    <div class="panel-body">
-        {{mikroblog.content}}<a href="#"><p>Read more</p></a>
-    </div>
-    <div class="panel-footer">
-    </div>
+    <hr>
+    <img src="{{mikroblog.image}}" alt="" class="microBlogPhoto">
+    <div class="microBlogContent">{{mikroblog.content}}</div>
 </div>

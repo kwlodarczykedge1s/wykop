@@ -39,6 +39,11 @@
                 controller: 'UserProfileController',
                 controllerAs: 'vm'
             })
+            .when('/newMicroblog',{
+                templateUrl: '/views/newMicroblog.html',
+                controller: 'NewMicroblogController',
+                controllerAs: 'vm'
+            })
             .otherwise({redirectTo: '/'});
     }]);
 })(window);
